@@ -1,0 +1,37 @@
+buildscript {
+	ext {
+		springBootVersion = '1.5.8.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+
+group = 'top.cuggis.javaservlet'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+	maven{
+		url 'https://raw.github.com/zxj5470/personalMaven/master/'
+	}
+}
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter-web')
+	compile("org.springframework.boot:spring-boot-starter-tomcat")
+	compile("org.apache.tomcat.embed:tomcat-embed-jasper")
+	compile("javax.servlet:jstl")
+	compile "io.vavr:vavr:0.9.1"
+	compile "com.oracle:ojdbc"
+//	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
