@@ -29,9 +29,11 @@ repositories {
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile("org.springframework.boot:spring-boot-starter-tomcat")
+	compile("org.springframework.boot:spring-boot-configuration-processor")
+
 	compile("org.apache.tomcat.embed:tomcat-embed-jasper")
 	compile("javax.servlet:jstl")
 	compile "io.vavr:vavr:0.9.1"
-	compile "com.oracle:ojdbc"
+	compile "com.oracle:ojdbc6:11.1.0.7.0"
 //	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
