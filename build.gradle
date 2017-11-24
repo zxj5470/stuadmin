@@ -33,7 +33,13 @@ dependencies {
 
 	compile("org.apache.tomcat.embed:tomcat-embed-jasper")
 	compile("javax.servlet:jstl")
-	compile "io.vavr:vavr:0.9.1"
+//	compile "io.vavr:vavr:0.9.1"
 	compile "com.oracle:ojdbc6:11.1.0.7.0"
-//	testCompile('org.springframework.boot:spring-boot-starter-test')
+	compile("org.springframework.boot:spring-boot-devtools:${springBootVersion}")
+
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
+
+bootRun {
+	addResources = true
 }
